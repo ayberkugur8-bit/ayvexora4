@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayvexora.web | Premium Web Sitesi Tasarımı</title>
+<meta name="description" content="Ayvexora.web: işletmeniz için modern, hızlı ve premium web siteleri. Standart 5.000 ₺, Premium 7.000 ₺. Hemen iletişime geçin.">
+<meta name="theme-color" content="#14102B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14102B; --plum:#221A45; --plum2:#2E2459; --ivory:#F3EEE3; --mute:#B9B2CC; --gold:#C9A86A; --gold2:#E6CF9C;
+  --serif:"Fraunces",Georgia,serif; --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--ivory);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:rgba(20,16,43,.85);backdrop-filter:blur(10px);border-bottom:1px solid rgba(201,168,106,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--serif);font-size:1.35rem;letter-spacing:.02em}
+.logo span{color:var(--gold)}
+.nav nav{display:flex;gap:28px;font-size:.95rem;color:var(--mute)}
+.nav nav a:hover{color:var(--gold2)}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;font-size:.95rem;transition:transform .2s,background .2s}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--ink)}
+.btn-gold:hover{transform:translateY(-2px)}
+.btn-line{border:1px solid var(--gold);color:var(--gold2)}
+.btn-line:hover{background:rgba(201,168,106,.12)}
+.hero{position:relative;padding:130px 0 120px;overflow:hidden;background:radial-gradient(900px 500px at 80% -10%,var(--plum2),transparent 70%),radial-gradient(600px 400px at 0% 100%,rgba(201,168,106,.12),transparent 70%)}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,7vw,5.2rem);line-height:1.05;max-width:14ch;letter-spacing:-.01em;animation:rise 1s ease both}
+.hero p{max-width:52ch;color:var(--mute);font-size:1.15rem;margin:28px 0 40px;animation:rise 1s .15s ease both}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;animation:rise 1s .3s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+section{padding:96px 0}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.15;margin-bottom:16px}
+.lead{color:var(--mute);max-width:56ch;margin-bottom:48px}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.plan{padding:40px 34px;border-radius:22px;background:var(--plum);border:1px solid rgba(255,255,255,.08)}
+.plan.pro{background:linear-gradient(160deg,var(--plum2),var(--plum));border:1px solid var(--gold);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+.plan h3{font-family:var(--serif);font-weight:600;font-size:1.5rem}
+.badge{display:inline-block;margin-left:10px;padding:3px 12px;font-family:var(--sans);font-size:.75rem;font-weight:700;border-radius:999px;background:var(--gold);color:var(--ink);vertical-align:middle}
+.price{font-family:var(--serif);font-size:3rem;margin:14px 0 22px;color:var(--gold2)}
+.price small{font-family:var(--sans);font-size:1rem;color:var(--mute)}
+.plan ul{list-style:none;margin-bottom:32px}
+.plan li{padding:9px 0 9px 28px;position:relative;border-bottom:1px solid rgba(255,255,255,.06);color:#DCD6EA}
+.plan li::before{content:"";position:absolute;left:4px;top:18px;width:9px;height:9px;border-radius:50%;background:var(--gold)}
+.plan .btn{width:100%;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;counter-reset:s}
+.step{border-top:1px solid var(--gold);padding-top:22px;counter-increment:s}
+.step::before{content:counter(s);font-family:var(--serif);font-size:2.2rem;color:var(--gold)}
+.step h3{font-size:1.1rem;margin:6px 0}
+.step p{color:var(--mute);font-size:.96rem}
+.contact{background:var(--plum);border-top:1px solid rgba(201,168,106,.2)}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:8px}
+.link{display:flex;flex-direction:column;gap:4px;padding:26px;border-radius:18px;background:var(--ink);border:1px solid rgba(255,255,255,.08);transition:border-color .2s,transform .2s}
+.link:hover{border-color:var(--gold);transform:translateY(-3px)}
+.link b{font-family:var(--serif);font-size:1.25rem;font-weight:600}
+.link span{color:var(--mute);font-size:.95rem}
+.owner{margin-top:36px;color:var(--mute)}
+.owner a{color:var(--gold2)}
+footer{padding:32px 0;text-align:center;color:var(--mute);font-size:.88rem;border-top:1px solid rgba(255,255,255,.06)}
+.wa{position:fixed;right:20px;bottom:20px;z-index:20;padding:14px 22px;border-radius:999px;background:#25D366;color:#06210f;font-weight:700;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+@media(max-width:720px){.nav nav{display:none}.hero{padding:90px 0 80px}section{padding:72px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Ayvexora<span>.web</span></a>
+    <nav aria-label="Ana menü">
+      <a href="#paketler">Paketler</a>
+      <a href="#surec">Süreç</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <a class="btn btn-gold" href="https://wa.me/905060362862" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <h1>İşletmenize yakışan premium web sitesi.</h1>
+      <p>Modern tasarım, hızlı yükleme ve telefonda kusursuz görünüm. Markanızı internette hak ettiği seviyeye taşıyoruz.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/905060362862?text=Merhaba%2C%20web%20sitesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">WhatsApp'tan yazın</a>
+        <a class="btn btn-line" href="#paketler">Paketleri görün</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="paketler">
+    <div class="wrap">
+      <h2>İki paket, net fiyat.</h2>
+      <p class="lead">Gizli ücret yok. İhtiyacınıza uygun paketi seçin, gerisini biz hallederelim.</p>
+      <div class="plans">
+        <article class="plan">
+          <h3>Standart</h3>
+          <div class="price">5.000 ₺</div>
+          <ul>
+            <li>Profesyonel tek sayfa web sitesi</li>
+            <li>Mobil uyumlu tasarım</li>
+            <li>WhatsApp ve sosyal medya bağlantıları</li>
+            <li>Yayına alma desteği</li>
+          </ul>
+          <a class="btn btn-line" href="https://wa.me/905060362862?text=Merhaba%2C%20Standart%20paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Standart'ı seç</a>
+        </article>
+        <article class="plan pro">
+          <h3>Premium <span class="badge">Önerilen</span></h3>
+          <div class="price">7.000 ₺</div>
+          <ul>
+            <li>Özel tasarım, premium renk ve tipografi</li>
+            <li>Gelişmiş sayfa yapısı ve animasyonlar</li>
+            <li>Arama motoru (SEO) temel ayarları</li>
+            <li>Hızlı yükleme ve tam mobil uyum</li>
+            <li>Yayına alma ve öncelikli destek</li>
+          </ul>
+          <a class="btn btn-gold" href="https://wa.me/905060362862?text=Merhaba%2C%20Premium%20paket%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener">Premium'u seç</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="surec">
+    <div class="wrap">
+      <h2>Fikirden yayına, dört adım.</h2>
+      <p class="lead">Süreç sade ve şeffaf ilerler.</p>
+      <div class="steps">
+        <div class="step"><h3>Görüşme</h3><p>İşletmenizi ve beklentilerinizi dinleriz.</p></div>
+        <div class="step"><h3>Tasarım</h3><p>Markanıza özel taslağı hazırlarız.</p></div>
+        <div class="step"><h3>Düzenleme</h3><p>Geri bildiriminizle son halini veririz.</p></div>
+        <div class="step"><h3>Yayın</h3><p>Siteniz yayına alınır, kullanıma hazır olur.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="iletisim">
+    <div class="wrap">
+      <h2>Projenizi konuşalım.</h2>
+      <p class="lead">En hızlı yanıt için WhatsApp'tan yazın. Instagram ve TikTok'ta da bizi bulabilirsiniz.</p>
+      <div class="links">
+        <a class="link" href="https://wa.me/905060362862" target="_blank" rel="noopener"><b>WhatsApp</b><span>0506 036 28 62</span></a>
+        <a class="link" href="https://www.instagram.com/ayvexora.web" target="_blank" rel="noopener"><b>Instagram</b><span>@ayvexora.web</span></a>
+        <a class="link" href="https://www.tiktok.com/@ayvexora.web" target="_blank" rel="noopener"><b>TikTok</b><span>@ayvexora.web</span></a>
+      </div>
+      <p class="owner">Ayberk Uğur · <a href="tel:+905060362862">0506 036 28 62</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="y">2026</span> Ayvexora.web. Tüm hakları saklıdır.</footer>
+<a class="wa" href="https://wa.me/905060362862" target="_blank" rel="noopener" aria-label="WhatsApp ile iletişime geç">WhatsApp</a>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
+</body>
+</html>
